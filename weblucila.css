@@ -1,0 +1,125 @@
+.container {  display: grid;
+    grid-template-columns: 1fr 0.5fr 0.5fr;
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "head head head"
+      "main-1 main-1 main-1"
+      "main-2 main-3 main-4"
+      "footer footer footer";
+
+    gap: 3px 3px;
+  }
+  
+  .head {
+    grid-area: head;
+    background-color:rgb(140, 171, 140);
+    position: fixed;
+    width: 100%;
+    z-index: 1000; /* Asegura que esté en la parte superior */
+    text-align: center; /* Centra el texto */
+  }
+
+  .main-1 {
+    grid-area: main-1;
+    background-color: rgb(166, 187, 166); 
+    display: flex;
+    padding: 5;
+
+}
+
+.text {
+    flex: 1;
+    font-size: 25px; /* Ajusta el tamaño de la fuente según tus preferencias */
+    padding: 1cm;
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2cm;
+}
+
+.images img {
+    max-width: 200px; /* Ajusta el tamaño máximo según tus preferencias */
+    height: auto; /* Permite que la imagen conserve su relación de aspecto */
+    margin-bottom: 10px; /* Ajusta el margen entre las imágenes */
+}
+  
+  .main-2 { 
+    grid-area: main-2; 
+    background-color: rgb(187, 212, 187);
+    }
+
+
+  .main-3 { 
+    grid-area: main-3; 
+    background-color:rgb(206, 231, 206); 
+    text-align: center; /* Centra el texto */ }
+
+  .main-4 { 
+    grid-area: main-4; 
+    background-color:rgb(206, 231, 206); 
+    text-align: center; /* Centra el texto */ }
+  
+  .footer { 
+    grid-area: footer; 
+    background-color:rgb(140, 171, 140); 
+    text-align: center;
+    padding:0%
+    }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    color: blue;
+    font-size:large;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    color: black;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  @media screen and (max-width: 992px) {
+    .container {  display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:auto;
+        grid-template-areas:
+          "head head"
+          "main-1 main-1"
+          "main-2 main-2"
+          "main-3 main-4"
+          "footer footer";
+      }
+    .images{
+        display:none
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .container {  display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:auto;
+        grid-template-areas:
+          "head"
+          "main-1"
+          "main-2"
+          "main-3" 
+          "main-4"
+          "footer";
+      }
+    .images{
+        display:none
+    }
+  }

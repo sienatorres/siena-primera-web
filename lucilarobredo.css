@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .head {
+    background-color:rgb(140, 171, 140);
+    position: fixed;
+    width: 100%;
+    z-index: 1000; /* Asegura que esté en la parte superior */
+    text-align: center; /* Centra el texto */
+  }
+  .text {
+    flex: 1;
+    font-size: 25px; /* Ajusta el tamaño de la fuente según tus preferencias */
+    padding: 1cm;
+}
+.audios {
+    flex: 1;
+    font-size: 20px; /* Ajusta el tamaño de la fuente según tus preferencias */
+    padding: 1cm;
+    text-align: justify;
+}
+.images {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2cm;
+}
+.images img {
+    max-width: 200px; /* Ajusta el tamaño máximo según tus preferencias */
+    height: auto; /* Permite que la imagen conserve su relación de aspecto */
+    margin-bottom: 10px; /* Ajusta el margen entre las imágenes */
+}
+
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+.main-1 {
+    background-color: rgb(187, 212, 187); 
+    display: flex;
+    float: left;
+    width: 100%;
+    text-align: justify;
+
+}
+.main-2 { 
+    background-color: rgb(187, 212, 187);
+    width: 50%;
+    display: flex;
+    height: auto;
+    float: left;
+    }
+
+
+  .main-3 { 
+    background-color:rgb(187, 212, 187); 
+    width: 25%;
+    float: left;
+    text-align: center; /* Centra el texto */ 
+    display: flex;
+    height: auto;
+    }
+
+
+  .main-4 { 
+    background-color:rgb(187, 212, 187); 
+    width: 25%;
+    float: left;
+    text-align: center; /* Centra el texto */ 
+    display: flex;
+    }
+  
+  .footer { 
+    background-color:rgb(140, 171, 140); }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    color: blue;
+    font-size:large;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    color: black;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /* On screens that are 992px wide or less, go from four columns to two columns */
+  @media screen and (max-width: 992px) {
+    .main-2 {
+      width: 100%;
+    }
+    .main-3 {
+        width: 50%
+    }
+    .main-4 {
+        width: 50%;
+      }
+  }
+  
+  /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .main-2 {
+        width:100%
+    }
+    .main-3 {
+        width:100%
+    }
+    .main-4 {
+        width: 100%;
+    }
+  }
