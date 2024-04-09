@@ -39,6 +39,14 @@
     text-align: justify;
 }
 
+p {
+  margin-bottom: 20px; /* Puedes ajustar el valor según lo necesites */
+}
+
+h3 {
+  margin-bottom: 20px; /* Puedes ajustar el valor según lo necesites */
+}
+
 .text-center {
   flex: 1;
   font-size: 25px; /* Ajusta el tamaño de la fuente según tus preferencias */
@@ -122,6 +130,8 @@
   .dropdown:hover .dropdown-content {
     display: block;
   }
+
+  
   @media screen and (max-width: 992px) {
     .container {  display: grid;
         grid-template-columns: 1fr 1fr;
