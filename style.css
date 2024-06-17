@@ -11,6 +11,7 @@
       "head head head"
       "main-1 main-1 main-1"
       "main-2 main-3 main-4"
+      "main-5 main-5 main-5"
       "footer footer footer";
 
   }
@@ -36,10 +37,10 @@
 
 }
 
-.recomen{
-  padding-top: 60px;
+.main-5{
+  grid-area: main-5;
+  padding: 50px;
   background-color: rgb(187, 212, 187);
-  grid-area: main-1;
   width: 100;
   margin: 0;
 }
@@ -173,7 +174,7 @@ h3 {
 }
 
 
-  @media screen and (max-width: 992px) {
+@media screen and (max-width: 992px) {
     .container {  display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows:auto;
@@ -182,13 +183,16 @@ h3 {
           "main-1 main-1"
           "main-2 main-2"
           "main-3 main-4"
+          "main-5 main-5"
           "footer footer";
       }
 
     .main-1 {
       display:block;
       }
-
+    .menu{
+      display:none
+    }
     .images{
       flex-direction:row;
       justify-content: center;
@@ -205,6 +209,7 @@ h3 {
           "main-2"
           "main-3" 
           "main-4"
+          "main-5"
           "footer";
       }
     .images{
@@ -212,5 +217,8 @@ h3 {
     }
     .main-1{
       margin-top: 1cm;
+    }
+    .menu{
+      display:none
     }
   }

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lucila robredo - literatura y cine</title>
     <link rel="stylesheet" href="style.css">
-    <script src="recomendacion.js"></script>
+    <script src="script.js"></script>
 
 
 </head>
@@ -18,8 +18,8 @@
                 <li><a href="#main-1">Quiénes Somos</a></li>
                 <li><a href="#main-2">Audios</a></li>
                 <li><a href="#main-3">Talleres</a></li>
+                <li><a href="#formulario">Recomendación</a></li>
                 <li><a href="#footer">Contacto</a></li>
-                <li><a href="recomendaciones.html">Recomendaciones</a></li>
             </ul>
         </div>
         <div id="main-1" class="main-1">
@@ -100,6 +100,31 @@
         <div class="main-4">
             <div class="text-m4">
                 <p>La dinámica en ambos grupos es la misma. Todo el material de lectura yo lo entrego en PDF, se entrega después de la clase, para leer para la semana siguiente. Alterno cuentos y novelas. Si son cuentos, doy 3 o 4 por clase, no más de 70 páginas. Si es una novela, pueden llegar a ser 100 páginas en una semana como máximo. Cuando doy cuentos en general doy dos clases por autor, pero puede ser 1 también. Las novelas, trato de que no sean de más de 200 páginas y ocupan dos clases. En cualquiera de los dos casos, yo empiezo el ciclo haciendo una presentación del autor, biografía, época, carrera literaria, relación con otros autores, estilo, etc, de aproximadamente 20 minutos. Luego abro el debate y cada uno comenta sus propias impresiones y reflexiones sobre el material. Yo completo con las mías. Luego de la clase, yo envío audios con lo trabajado en clase (para ausentes, y para quienes quieren guardar un registro) uno con la presentación del autor, y uno para el análisis de cada cuento.</p>
+            </div>
+        </div>
+
+        <div id="formulario" class="main-5">
+            <div class="text-center">
+
+                <h3>Responde estas preguntas y te recomendaremos un libro:</h2>
+                <label for="genero">¿Qué género preferís?</label>
+                <select id="genero">
+                    <option value="novela">Novela</option>
+                    <option value="cuento">Cuento</option>
+                </select><br>
+                <label for="tematica">¿Qué temática preferís?</label>
+                <select id="tematica">
+                    <option value="romantica">Romantica</option>
+                    <option value="historica">Historica</option>
+                    <option value="policial">Policial</option>
+                </select><br>
+                <label for="edad">¿Cuál es tu edad?</label>
+                <input type="number" id="edad"><br>
+                <button onclick="recomendarLibro()">Recomendame un libro!</button>
+                <div id="recomendarLibro" style="display:none;">
+                    <h4>¡Te recomendamos este libro!</h4>
+                    <h5 id="laRecomendacion"></h5>
+                </div>
             </div>
         </div>
 

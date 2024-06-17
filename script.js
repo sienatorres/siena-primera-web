@@ -78,4 +78,3 @@ function recomendarLibro() {
 	document.getElementById("recomendarLibro").style.display="block";
     document.getElementById("laRecomendacion").textContent = recomendacion;
 }
-
