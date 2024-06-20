@@ -129,6 +129,34 @@
         </div>
 
 
+        <div id="products" class="main-6">
+            <h3>Productos</h3>
+            <div class="producto">
+                <p>Mensual de Literatura</p>
+                <p>$25000</p>
+                <button onclick="AgregarAlCarrito('Mensual de Literatura', 25000)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <p>Semanal de Literatura</p>
+                <p>$50000</p>
+                <button onclick="AgregarAlCarrito('Semanal de Literatura', 50000)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <p>Mensual de Cine</p>
+                <p>$25000</p>
+                <button onclick="AgregarAlCarrito('Mensual de Cine', 25000)">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <div id="carrito" class="main-7">
+            <h3>Carrito de Compras</h3>
+            <div id="itemsCarrito">
+            </div>
+            <p>Total: $<span id="PrecioTotal">0</span></p>
+            <button onclick="checkout()">Finalizar Compra</button>
+        </div>
+
+
         <div id="footer" class="footer">
             <div class="text-center">
                 <h3>Contacto:</h3>

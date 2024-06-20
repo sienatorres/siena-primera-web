@@ -78,3 +78,68 @@ function recomendarLibro() {
 	document.getElementById("recomendarLibro").style.display="block";
     document.getElementById("laRecomendacion").textContent = recomendacion;
 }
+
+
+let itemsCarrito=[];
+
+function AgregarAlCarrito(NombreProducto,precio) {
+    let esta=itemsCarrito.find(item => item.nombre === NombreProducto);
+
+    if (esta) {
+        esta.cantidad++;
+        esta.PrecioTotal=esta.cantidad*precio;
+    } else {
+        itemsCarrito.push({
+            nombre: NombreProducto,
+            precio: precio,
+            cantidad: 1,
+            PrecioTotal: precio
+        });
+    }
+    MostrarCarrito();
+}
+
+function MostrarCarrito() {
+    const itemsCarritoDiv=document.getElementById('itemsCarrito');
+    itemsCarritoDiv.innerHTML='';
+
+    itemsCarrito.forEach(item => {
+        const itemDiv=document.createElement('div');
+        itemDiv.innerHTML= `
+            <p>${item.nombre} - $${item.precio} - Cantidad: 
+                <input type="number" value="${item.cantidad}" min="1" onchange="actualizarCantidad('${item.nombre}', this.value)">
+                <button onclick="EliminarDelCarrito('${item.nombre}')">Eliminar</button>
+            </p>
+            <p>Total: $${item.PrecioTotal}</p>
+        `;
+        itemsCarritoDiv.appendChild(itemDiv);
+    });
+
+    const PrecioTotalSpan=document.getElementById('PrecioTotal');
+    const PrecioTotal=itemsCarrito.reduce((acc, item) => acc + item.PrecioTotal, 0);
+    PrecioTotalSpan.textContent=PrecioTotal;
+}
+
+function actualizarCantidad(NombreProducto, NuevaCantidad) {
+    let esta=itemsCarrito.find(item => item.nombre===NombreProducto);
+
+    if (esta) {
+        esta.cantidad=parseInt(NuevaCantidad);
+        esta.PrecioTotal=esta.cantidad*esta.precio;
+    }
+
+    MostrarCarrito();
+}
+
+function EliminarDelCarrito(NombreProducto) {
+    itemsCarrito=itemsCarrito.filter(item => item.nombre!==NombreProducto);
+    MostrarCarrito();
+}
+
+function checkout() {
+    alert('Compra finalizada. Gracias por su compra!');
+    itemsCarrito=[];
+    MostrarCarrito(); 
+}
+
+MostrarCarrito();

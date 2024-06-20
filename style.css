@@ -12,6 +12,7 @@
       "main-1 main-1 main-1"
       "main-2 main-3 main-4"
       "main-5 main-5 main-5"
+      "main-6 main-6 main-7"
       "footer footer footer";
 
   }
@@ -40,7 +41,23 @@
 .main-5{
   grid-area: main-5;
   padding: 50px;
+  background-color: rgb(166, 187, 166);
+  width: 100;
+  margin: 0;
+}
+
+.main-6{
+  grid-area: main-6;
+  padding: 50px;
   background-color: rgb(187, 212, 187);
+  width: 100;
+  margin: 0;
+}
+
+.main-7{
+  grid-area: main-7;
+  padding: 50px;
+  background-color:rgb(206, 231, 206); 
   width: 100;
   margin: 0;
 }
@@ -173,6 +190,19 @@ h3 {
     background-color: #f0f0f0;
 }
 
+.producto {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#carrito {
+  padding: 30px;
+  border: 1px solid #ccc;
+}
 
 @media screen and (max-width: 992px) {
     .container {  display: grid;
@@ -184,6 +214,7 @@ h3 {
           "main-2 main-2"
           "main-3 main-4"
           "main-5 main-5"
+          "main-6 main-7"
           "footer footer";
       }
 
@@ -210,6 +241,8 @@ h3 {
           "main-3" 
           "main-4"
           "main-5"
+          "main-6"
+          "main-7"
           "footer";
       }
     .images{
